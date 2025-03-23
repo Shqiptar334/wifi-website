@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi Helpline - Eliot Fethahaj</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #eef2f3;
+        }
+        header {
+            background: #0073e6;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #005bb5;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .service {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .reviews-list {
+            margin-top: 20px;
+        }
+        .review {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .review-form {
+            margin-top: 20px;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #0073e6;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WiFi Helpline - Eliot Fethahaj</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#diensten">Diensten</a>
+        <a href="#over">Over Ons</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="home" class="section">
+            <h2>Welkom bij WiFi Helpline</h2>
+            <p>Wij bieden professionele hulp bij wifiproblemen, hosting en optimalisatie.</p>
+        </section>
+        <section id="diensten" class="section">
+            <h2>Onze Diensten</h2>
+            <div class="services">
+                <div class="service"><h3>Website Reparatie</h3><p>Los problemen met je wifi snel op.</p></div>
+                <div class="service"><h3>Hosting & Domein</h3><p>Beheer en optimaliseer je hosting.</p></div>
+                <div class="service"><h3>SEO & Snelheid</h3><p>Maak je wifi sneller.</p></div>
+                <div class="service"><h3>Beveiliging</h3><p>Bescherm je wifi tegen bedreigingen.</p></div>
+                
+            </div>
+        </section>
+        <section id="over" class="section">
+            <h2>Over Ons</h2>
+            <p>WiFi Helpline, opgericht door Eliot Fethahaj, helpt bedrijven en particulieren met hun wifiproblemen.</p>
+        </section>
+        <section id="reviews" class="section">
+            <h2>Klanten Reviews</h2>
+            <div id="reviews-list" class="reviews-list">
+                
+            </div>
+            <div class="review-form">
+                <h3>Laat een review achter</h3>
+                <input type="text" id="name" placeholder="Jouw naam">
+                <textarea id="review" placeholder="Jouw review"></textarea>
+                <button onclick="addReview()">Verstuur</button>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Neem contact met ons op via e-mail of telefoon.</p>
+            <p>Email: <a href="mailto:eliotfetahaj5@gmail.com">eliotfetahaj5@gmail.com</a></p>
+            <p>Telefoon: <a href="+32 470 17 53 51">+32 470 17 53 51</a></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 WiFi Helpline - Alle rechten voorbehouden</p>
+    </footer>
+    <script>
+        function addReview() {
+            let name = document.getElementById('name').value;
+            let review = document.getElementById('review').value;
+            if (name && review) {
+                let reviewList = document.getElementById('reviews-list');
+                let newReview = document.createElement('div');
+                newReview.classList.add('review');
+                newReview.innerText = `"${review}" – ${name}`;
+                reviewList.appendChild(newReview);
+                document.getElementById('name').value = '';
+                document.getElementById('review').value = '';
+            } else {
+                alert('Vul zowel je naam als een review in!');
+            }
+        }
+    </script>
+</body>
+</html>
