@@ -1,1 +1,3 @@
-# wifi-website
+TO OPEN THIS FILE 
+WRITE THIS IN YOU SEARCH BAR https://shqiptar334.github.io/wifi-website/
+AND THERE YOU CAN SEE IF I CAN HELP YOU WITH YOUR WIFI (IN DUTCH)
